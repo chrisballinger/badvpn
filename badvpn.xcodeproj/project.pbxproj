@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D902EDAC1903418300B1C18A /* UdpGwClient.c in Sources */ = {isa = PBXBuildFile; fileRef = D902EDAA1903418300B1C18A /* UdpGwClient.c */; };
 		D9420A3F18FF1D8A003E8F30 /* SocksUdpGwClient.c in Sources */ = {isa = PBXBuildFile; fileRef = D9420A3B18FF1D8A003E8F30 /* SocksUdpGwClient.c */; };
 		D9420A4018FF1D8A003E8F30 /* tun2socks.c in Sources */ = {isa = PBXBuildFile; fileRef = D9420A3D18FF1D8A003E8F30 /* tun2socks.c */; };
 		D9420A4D18FF974C003E8F30 /* BLog.c in Sources */ = {isa = PBXBuildFile; fileRef = D9420A4218FF974C003E8F30 /* BLog.c */; };
@@ -54,7 +55,6 @@
 		D9420ADD18FF97B6003E8F30 /* StreamRecvInterface.c in Sources */ = {isa = PBXBuildFile; fileRef = D9420AC018FF97B6003E8F30 /* StreamRecvInterface.c */; };
 		D9420AE518FF97E0003E8F30 /* BTap.c in Sources */ = {isa = PBXBuildFile; fileRef = D9420ADF18FF97E0003E8F30 /* BTap.c */; };
 		D9420AEB18FF98D6003E8F30 /* BSocksClient.c in Sources */ = {isa = PBXBuildFile; fileRef = D9420AE818FF98D6003E8F30 /* BSocksClient.c */; };
-		D9420AF018FF98EC003E8F30 /* UdpGwClient.c in Sources */ = {isa = PBXBuildFile; fileRef = D9420AEE18FF98EC003E8F30 /* UdpGwClient.c */; };
 		D9420AF718FF9933003E8F30 /* KeepaliveIO.c in Sources */ = {isa = PBXBuildFile; fileRef = D9420AF318FF9933003E8F30 /* KeepaliveIO.c */; };
 		D9420AF818FF9933003E8F30 /* PacketPassInactivityMonitor.c in Sources */ = {isa = PBXBuildFile; fileRef = D9420AF518FF9933003E8F30 /* PacketPassInactivityMonitor.c */; };
 		D9420B2D18FF997B003E8F30 /* api_lib.c in Sources */ = {isa = PBXBuildFile; fileRef = D9420AFA18FF997B003E8F30 /* api_lib.c */; };
@@ -119,6 +119,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D902EDAA1903418300B1C18A /* UdpGwClient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UdpGwClient.c; sourceTree = "<group>"; };
+		D902EDAB1903418300B1C18A /* UdpGwClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UdpGwClient.h; sourceTree = "<group>"; };
 		D9420A3218FF1AA2003E8F30 /* tun2socks */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tun2socks; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9420A3B18FF1D8A003E8F30 /* SocksUdpGwClient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SocksUdpGwClient.c; sourceTree = "<group>"; };
 		D9420A3C18FF1D8A003E8F30 /* SocksUdpGwClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocksUdpGwClient.h; sourceTree = "<group>"; };
@@ -224,8 +226,6 @@
 		D9420AE018FF97E0003E8F30 /* BTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTap.h; sourceTree = "<group>"; };
 		D9420AE818FF98D6003E8F30 /* BSocksClient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BSocksClient.c; sourceTree = "<group>"; };
 		D9420AE918FF98D6003E8F30 /* BSocksClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSocksClient.h; sourceTree = "<group>"; };
-		D9420AEE18FF98EC003E8F30 /* UdpGwClient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UdpGwClient.c; sourceTree = "<group>"; };
-		D9420AEF18FF98EC003E8F30 /* UdpGwClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UdpGwClient.h; sourceTree = "<group>"; };
 		D9420AF318FF9933003E8F30 /* KeepaliveIO.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = KeepaliveIO.c; sourceTree = "<group>"; };
 		D9420AF418FF9933003E8F30 /* KeepaliveIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeepaliveIO.h; sourceTree = "<group>"; };
 		D9420AF518FF9933003E8F30 /* PacketPassInactivityMonitor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PacketPassInactivityMonitor.c; sourceTree = "<group>"; };
@@ -294,6 +294,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D902EDA81903418300B1C18A /* udpgw_client */ = {
+			isa = PBXGroup;
+			children = (
+				D902EDAA1903418300B1C18A /* UdpGwClient.c */,
+				D902EDAB1903418300B1C18A /* UdpGwClient.h */,
+			);
+			path = udpgw_client;
+			sourceTree = SOURCE_ROOT;
+		};
 		D9420A1918FF1A66003E8F30 = {
 			isa = PBXGroup;
 			children = (
@@ -316,7 +325,7 @@
 			children = (
 				D9420B5B18FF997E003E8F30 /* lwip */,
 				D9420AF118FF9933003E8F30 /* flowextra */,
-				D9420AEC18FF98EC003E8F30 /* udpgw_client */,
+				D902EDA81903418300B1C18A /* udpgw_client */,
 				D9420AE718FF98D6003E8F30 /* socksclient */,
 				D9420ADE18FF97E0003E8F30 /* tuntap */,
 				D9420A8618FF97B6003E8F30 /* flow */,
@@ -471,16 +480,6 @@
 			);
 			path = socksclient;
 			sourceTree = SOURCE_ROOT;
-		};
-		D9420AEC18FF98EC003E8F30 /* udpgw_client */ = {
-			isa = PBXGroup;
-			children = (
-				D9420AEE18FF98EC003E8F30 /* UdpGwClient.c */,
-				D9420AEF18FF98EC003E8F30 /* UdpGwClient.h */,
-			);
-			name = udpgw_client;
-			path = ../udpgw_client;
-			sourceTree = "<group>";
 		};
 		D9420AF118FF9933003E8F30 /* flowextra */ = {
 			isa = PBXGroup;
@@ -668,7 +667,6 @@
 				D9420B5518FF997B003E8F30 /* sys.c in Sources */,
 				D9420A8418FF9781003E8F30 /* BTime.c in Sources */,
 				D9420B4518FF997B003E8F30 /* ip6_addr.c in Sources */,
-				D9420AF018FF98EC003E8F30 /* UdpGwClient.c in Sources */,
 				D9420AF818FF9933003E8F30 /* PacketPassInactivityMonitor.c in Sources */,
 				D9420ACF18FF97B6003E8F30 /* PacketRecvBlocker.c in Sources */,
 				D9420AC318FF97B6003E8F30 /* LineBuffer.c in Sources */,
@@ -744,6 +742,7 @@
 				D9420ADB18FF97B6003E8F30 /* StreamPassInterface.c in Sources */,
 				D9420AF718FF9933003E8F30 /* KeepaliveIO.c in Sources */,
 				D9420B3618FF997B003E8F30 /* dhcp.c in Sources */,
+				D902EDAC1903418300B1C18A /* UdpGwClient.c in Sources */,
 				D9420AD618FF97B6003E8F30 /* SinglePacketSender.c in Sources */,
 				D9420B3418FF997B003E8F30 /* tcpip.c in Sources */,
 				D9420B4A18FF997B003E8F30 /* memp.c in Sources */,
